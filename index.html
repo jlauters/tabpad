@@ -1,13 +1,51 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: tabpad | home 
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div id="home" class="container">
+  
+  <div id="tabpad-options" class="row">
+      <div class="col-sm-6 text-center">
+          <div class="tab-option">Tab a song</div>
+      </div>
+
+      <div class="col-sm-6 text-center">
+          <div class="tab-option">Add chords to lyrics</div>
+      </div>
+  </div>
+
+  <div id="tabpad-container" class="row">
+
+      <div class="chord-charts row">
+          <div class="e-maj col-sm-3"></div>
+          <div class="c-maj col-sm-3"></div>
+          <div class="f-maj col-sm-3"></div>
+          <div class="g-maj col-sm-3"></div>
+      </div>
+
+      <div id="tabpad" class="col-xs-12" contenteditable="true">
+ 
+          <div class="verse">
+              Imagine there's no heaven
+              It's easy if you try
+              No hell below us
+              Above us only sky
+              Imagine all the people
+              Living for today...
+          </div>
+
+          <div class="verse">
+              Imagine there's no countries
+              It isn't hard to do
+              Nothing to kill or die for
+              And no religion too
+              Imagine all the people
+              Living life in peace...
+          </div>
+
+      </div>
+  </div>
+
+
 </div>

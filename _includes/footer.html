@@ -1,0 +1,19 @@
+<footer class="continer-fluid" role="contentinfo" style="background-color: #c6c6c6;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">tabpad footer content</div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/js/fancybox/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/css/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/js/tabpad.js"></script>
+
+{% for url in page.extra_scripts %}
+    <script type="text/javascript" src="{{url}}"></script>
+{% endfor %}
+
+</body>
+</html>
