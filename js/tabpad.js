@@ -24,24 +24,36 @@
         var selectedText = Tabpad.Selector.getSelected();
         if(selectedText != '') {
 
-            var lyricSection = '<div class="chord-section">' + selectedText + '</div>';
-            var verse_contents = $('#tabpad .verse');
+            var lyricSection = '<div class="chord-section">'
+                + '<div class="chord-section-header">'
+                + '<input type="text" name="chord-name" placeholder="enter a chord">' 
+                + '</div>'
+                + selectedText 
+                + '</div>';
 
-            $(verse_contents).each(function(idx, contents) {
-
-                var index = (idx + 1);
-                var contents_html = $(contents).html();
-
-                if(selectedText.extentOffset > 0) {
-                    var updated = contents_html.replace(selectedText, lyricSection);
-                    $('#tabpad .verse:nth-child(' + index + ')').html(updated); 
-                }
-            });
+            var lyrics_html = $('#tabpad').html();
+        
+            if(selectedText.extentOffset > 0 ) {
+                var updated = lyrics_html.replace(selectedText, lyricSection);
+                $('#tabpad').html(updated);
+            }
 
         }   
+
+        // Listen for Chord name entry and replace form with static content
+        $('input[name="chord-name"]').blur(function(e) {
+            e.preventDefault();
+
+            var value = $(this).val();
+            $(this).parent('.chord-section-header').html(value);
+        });
+
     }
 
     $(document).bind("mouseup", Tabpad.Selector.mouseup); 
+
+    
+
 
 })(jQuery);
 

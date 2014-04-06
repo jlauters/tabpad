@@ -29,7 +29,7 @@ header .logo-container { color: #fff; font-size: 60px; font-weight: lighter; mar
     padding: 3% 1%; 
     padding-bottom: 5px;  
     border: 3px solid #ddd; 
-    display: inline; 
+    display: inline-block; 
 }
 
 .chord-charts .e-maj { 
